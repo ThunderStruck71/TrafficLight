@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       counter: 3,
-      nextRoute: localStorage.nextRoute ?? Routes.GREEN,
+      nextRoute: sessionStorage.nextRoute ?? Routes.GREEN,
       isBlinked: false,
     };
   },
@@ -30,7 +30,7 @@ export default {
       else if (from?.path === Routes.RED) {
         vm.nextRoute = Routes.GREEN;
       }
-      localStorage.nextRoute = vm.nextRoute;
+      sessionStorage.nextRoute = vm.nextRoute;
     });
   },
   created() {
