@@ -27,9 +27,7 @@ export default {
       if (from?.path === Routes.GREEN) {
         vm.nextRoute = Routes.RED;
       }
-      else if (from?.path === Routes.RED) {
-        vm.nextRoute = Routes.GREEN;
-      }
+      
       sessionStorage.nextRoute = vm.nextRoute;
     });
   },
